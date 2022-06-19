@@ -1,4 +1,4 @@
-// TODO: Add your import statements here.
+//import statements .
 import { getRoles, getCompanies } from './modules/salaryData.js';
 import {
   getAverageSalaryByRole,
@@ -7,7 +7,7 @@ import {
   getIndustryAverageSalary,
 } from "./modules/workAroundModule.js";
 import { formatNumber  } from './modules/utilities.js';
-// TODO: Get the companies and roles using the salaryData module.
+// Get the companies and roles using the salaryData module.
 const companies = getCompanies();
 const roles = getRoles();
 
@@ -25,7 +25,8 @@ function renderInputButtons(labels, groupName) {
   header.innerText = `Select a ${groupName}`;
   container.appendChild(header);
 
-  labels.forEach((label) => {
+  labels.forEach((label) => 
+  {
     // For each label...
     // Create the radio input element.
     let divElement = document.createElement("div");
@@ -35,6 +36,7 @@ function renderInputButtons(labels, groupName) {
     inputElement.setAttribute("type", "radio");
     inputElement.setAttribute("name", groupName);
     inputElement.setAttribute("value", label);
+    inputElement.setAttribute("id", label);
     divElement.appendChild(inputElement);
 
     // Create a label for that radio input element.
